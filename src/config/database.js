@@ -27,7 +27,7 @@ module.exports = {
     ssl: process.env.NODE_ENV === 'production'
       ? {
           require: true,
-          rejectUnauthorized: true
+          rejectUnauthorized: false // Aiven usa certificados propios, no verificar CA
         }
       : false
   },
